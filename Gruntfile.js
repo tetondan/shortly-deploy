@@ -131,13 +131,13 @@ module.exports = function(grunt) {
 
   grunt.registerTask('upload', function(n) {
     if(grunt.option('prod')) {
-      grunt.task.run(['lint', 'test'])
+      grunt.task.run(['lint', 'test', 'build', 'shell'])
     } else {
       grunt.task.run([ 'server-dev' ]);
     }
   });
 
-  grunt.registerTask( 'deploy', ['shell'] );
+  grunt.registerTask( 'deploy', ['upload'] );
 
 
 };
