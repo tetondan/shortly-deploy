@@ -86,7 +86,6 @@ module.exports = function(grunt) {
             'git add .',
             'git commit -m "autocommit from grunt"',
             'git push azure master',
-            'batman7691',
             'azure site browse'
           ].join('&&')
         }
